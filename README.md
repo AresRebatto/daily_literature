@@ -1,16 +1,12 @@
-# daily_literature
+# daily literature
 
-A new Flutter project.
+An application for reading poetry by authors of depth without having to pay for a premium plan to be able to do anything.
 
-## Getting Started
+It is, however, an educational project that will most likely not be followed for much longer and updated continuously.
 
-This project is a starting point for a Flutter application.
+In fact, this is one of my first applications written in Flutter, and therefore poorly optimised and written in all likelihood: that is why there is no point in trying to update it continuously, but it would make more sense to redo it from scratch in the future with more experience.
 
-A few resources to get you started if this is your first Flutter project:
+If you would still like to try it out out of curiosity, I will release the apk once it is done.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+If you would like to help me
+Tradotto con DeepL https://www.deepl.com/app/?utm_source=android&utm_medium=app&utm_campaign=share-translation
