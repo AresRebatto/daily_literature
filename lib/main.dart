@@ -30,13 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           children: <Widget>[
+            //Barra di ricerca e button cerca
             Row
             (
               children:
@@ -106,6 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ]
             ),
 
+            //Menu
             Row(
               children: <Widget>[
                 TextButton(
@@ -140,12 +135,218 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
 
               ],
+            ),
+            Align
+            (
+              alignment: Alignment.topLeft,
+              child: Container(
+                  margin: const EdgeInsets.only(left: 10),
+                  child: const Text(
+                "Poeti",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300,
+                ),
+              )),
+            ),
+            //Sezione nuovi poeti aggiunti
+            Container(
+              height: 220,
+              margin: const EdgeInsets.only(top: 10),
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const Ungaretti()),
+                          );
+                        },
+                              child: Container(
+                                margin:  const EdgeInsets.only(left: 10.0),
+                                child: Image.asset("assets/Ungaretti.png"),
+                              ),
+                      ),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const Leopardi()),
+                          );
+                        },
+                        child: Container(
+                          margin:  const EdgeInsets.only(left: 10.0),
+                          child: Image.asset("assets/Leopardi.png"),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const Petrarca()),
+                          );
+                        },
+                        child: Container(
+                          margin:  const EdgeInsets.only(left: 10.0),
+                          child: Image.asset("assets/Petrarca.png"),
+                        ),
+                      ),
+                    ]
+                  ),
+            ),
+            Align
+              (
+              alignment: Alignment.topLeft,
+              child: Container(
+                  margin: const EdgeInsets.only(left: 10, top: 30),
+                  child: const Text(
+                    "Poesie",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  )
+              ),
+            ),
+
+            //Sezione nuove poesie aggiunte
+            Container(
+              margin: const EdgeInsets.only(top: 10.0, left: 10.0),
+              height: 320,
+
+
+              child: Row(
+                children: <Widget> [
+                   Column(
+                    children: <Widget>[
+                      //Porto sepolto Ungaretti
+                      GestureDetector(
+                        onTap: (){},
+                        child:Container(
+                          margin: const EdgeInsets.only(top: 10.0),
+                          height: 55,
+                          child: Row(
+                            children: [
+                              Image.asset("assets/portoSepolto.jpg"),
+                              const Text(
+                                "   Porto sepolto \n   Giuseppe Ungaretti",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      //L'infinito Leopardi
+                      GestureDetector(
+                        onTap: (){},
+                        child: Container(
+                          height: 55,
+                          margin: const EdgeInsets.only(top: 25.0),
+                          child: Row(
+                            children: [
+                              Image.asset("assets/Recanati.jpg"),
+                              const Text(
+                                "     L'infinito \n     Giacomo Leopardi",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      //A Silvia Leopardi
+                      GestureDetector(
+                        onTap: (){},
+                        child: Container(
+                          height: 55,
+                          margin: const EdgeInsets.only(top: 25.0),
+                          child: Row(
+                            children: [
+                              Image.asset("assets/Silvia.jpg"),
+                              const Text(
+                                "     A silvia \n     Giacomo Leopardi",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      //Solo et pensoso Petrarca
+                      GestureDetector(
+                        onTap: (){},
+                        child: Container(
+                          height: 55,
+                          margin: const EdgeInsets.only(top: 25.0),
+                          child: Row(
+                            children: [
+                              Image.asset("assets/SoloPensoso.jpg"),
+                              const Text(
+                                "   Solo et Pensoso \n   Francesco Petrarca",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+
+                    ],
+                  )
+                ],
+              ),
             )
-
-
           ],
         ),
       ),
+    );
+  }
+}
+
+
+class Ungaretti extends StatelessWidget {
+  const Ungaretti({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+    );
+  }
+}
+
+
+class Leopardi extends StatelessWidget {
+  const Leopardi({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+    );
+  }
+}
+
+
+class Petrarca extends StatelessWidget {
+  const Petrarca({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
     );
   }
 }
